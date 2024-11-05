@@ -160,7 +160,7 @@
           form di bawah ini.</p>
       </article>
 
-      <form id="frm" class="mt-8 max-w-lg mx-auto  dark:bg-[#1a202c] p-6 rounded-lg shadow-md space-y-4" method="POST" action="https://script.google.com/macros/s/AKfycbyohG1Yp0iZl5zUN767YeQGfUOzJZQ1v3XuUsG_-P3uowQiylZuDBfvvMW9gvUPtt_DSA/exec">
+      <form id="frm" class="mt-8 max-w-lg mx-auto  dark:bg-[#1a202c] p-6 rounded-lg shadow-md space-y-4" method="POST" action="https://script.google.com/macros/s/AKfycbzCjTY0B7U3sGoc8sVVuF4uPrx5mbQw8M41zOhznFARYKesxVgytvL_V0lMWhY-EQisng/exec">
         <div>
           <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Nama</label>
           <input type="text" id="Name" name="Name"
@@ -246,13 +246,13 @@
         e.preventDefault();
         const data = new FormData(form);
         const action = e.target.action;
-        fetch(action, {
-          redirect: 'follow',
-          method: 'POST',
-          headers: {
-            "Content-Type": "text/plain;charset=utf-8",
-          },
-          body: JSON.stringify(data),
+        var query = new URLSearchParams(data).toString();
+        fetch(`${action}?${query}`, {
+          // redirect: 'follow',
+          method: 'GET',
+          // headers: {
+          //   "Content-Type": "text/plain;charset=utf-8",
+          // },
         })
         .then(() => {
           alert("Your request successfully sent!");
