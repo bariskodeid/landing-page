@@ -245,6 +245,8 @@
       const form = document.getElementById('frm');
       form.addEventListener("submit", function(e) {
         e.preventDefault();
+        // change Kirim Pesan to Loading...
+        document.querySelector('button[type="submit"]').textContent = 'Loading...';
         const data = new FormData(form);
         const action = e.target.action;
         var query = new URLSearchParams(data).toString();
@@ -262,7 +264,17 @@
             confirmButtonText: 'OK'
           });
           form.reset();
+          document.querySelector('button[type="submit"]').textContent = 'Kirim Pesan';
         })
+        .catch(() => {
+          Swal.fire({
+            icon: 'error',
+            title: 'Gagal Mengirim Pesan',
+            text: 'Terjadi kesalahan saat mengirim pesan. Silahkan coba lagi.',
+            confirmButtonText: 'OK'
+          });
+          document.querySelector('button[type="submit"]').textContent = 'Kirim Pesan';
+        });
       });
     });
   </script>
