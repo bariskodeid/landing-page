@@ -160,7 +160,7 @@
           form di bawah ini.</p>
       </article>
 
-      <form id="frm" class="mt-8 max-w-lg mx-auto  dark:bg-[#1a202c] p-6 rounded-lg shadow-md space-y-4" method="POST" action="https://script.google.com/macros/s/AKfycbzCjTY0B7U3sGoc8sVVuF4uPrx5mbQw8M41zOhznFARYKesxVgytvL_V0lMWhY-EQisng/exec">
+      <form id="frm" class="mt-8 max-w-lg mx-auto  dark:bg-[#1a202c] p-6 rounded-lg shadow-md space-y-4" method="POST" action="https://script.google.com/macros/s/AKfycbwzJKraaGA7LzsOVtNFvn70_3QyO8mYRzystoB9-5q3qVtVwP7mwfDUUyvMLdAPJi8AuQ/exec">
         <div>
           <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Nama</label>
           <input type="text" id="Name" name="Name"
@@ -200,6 +200,7 @@
         d="M12 2.04c-5.52 0-10 4.48-10 10 0 1.76.46 3.41 1.27 4.87L2 22l5.17-1.36c1.41.76 3.01 1.18 4.83 1.18 5.52 0 10-4.48 10-10s-4.48-10-10-10zm0 18c-1.51 0-2.9-.35-4.15-.98l-.3-.16-3.04.8.8-3.04-.16-.3c-.63-1.25-.98-2.64-.98-4.15 0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8zm4.61-5.53c-.26-.13-1.52-.76-1.76-.85-.24-.09-.42-.13-.6.13-.18.26-.69.85-.85 1.03-.16.18-.31.2-.58.07-.26-.13-1.09-.4-2.08-1.26-.77-.68-1.29-1.51-1.44-1.77-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.47.13-.16.17-.27.26-.45.09-.18.04-.34-.02-.47-.13-.26-.6-1.45-.83-1.99-.22-.53-.45-.46-.6-.47h-.51c-.17 0-.45.07-.69.34s-.91.89-.91 2.18c0 1.28.93 2.52 1.06 2.69.13.18 1.83 2.88 4.43 3.76.62.21 1.1.34 1.47.44.62.2 1.18.17 1.62.1.49-.07 1.52-.62 1.73-1.22.21-.6.21-1.11.15-1.22-.06-.11-.24-.18-.5-.31z" />
     </svg>
   </a>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -248,14 +249,19 @@
         const action = e.target.action;
         var query = new URLSearchParams(data).toString();
         fetch(`${action}?${query}`, {
-          // redirect: 'follow',
-          method: 'GET',
-          // headers: {
-          //   "Content-Type": "text/plain;charset=utf-8",
-          // },
+          method: 'POST',
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+          },
         })
         .then(() => {
-          alert("Your request successfully sent!");
+          Swal.fire({
+            icon: 'success',
+            title: 'Pesan Terkirim',
+            text: 'Terima kasih atas pesan yang telah Anda kirimkan. Kami akan segera meresponnya.',
+            confirmButtonText: 'OK'
+          });
+          form.reset();
         })
       });
     });
