@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Portfolio - Baris Kode">
+  <meta name="description" content="Portfolio projek-projek yang telah dikerjakan oleh Baris Kode. Lihat berbagai aplikasi web, mobile, dan desktop yang telah kami buat.">
+  <meta name="keywords" content="portfolio, software, web, mobile, desktop, baris, kode, project">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="author" content="Baris Kode">
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Baris Kode" />
+  <link rel="manifest" href="site.webmanifest" />
+  <title>Portfolio - Baris Kode</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="min-h-screen bg-slate-50 text-black dark:bg-slate-950 dark:text-[#fed9aa]">
+  <header class="backdrop-blur-sm sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="text-2xl font-bold">
+        <span class="text-[#28badb]">Baris</span> <span class="text-[#eb5f0d]">Kode</span>
+      </a>
+      <button id="mobile-menu-button" class="sm:hidden text-3xl text-[#28badb] focus:outline-none transition duration-300">
+        <span id="menu-icon" class="block transition-opacity duration-300">&#9776;</span>
+        <span id="close-icon" class="hidden transition-opacity duration-300">&#10005;</span>
+      </button>
+      <nav class="hidden sm:block ">
+        <ul class="flex space-x-4 text-[#28badb]">
+          <li><a href="index.html" class="hover:text-[#fed9aa]">Home</a></li>
+          <li><a href="index.html#services" class="hover:text-[#fed9aa]">Service</a></li>
+          <li><a href="portfolio.html" class="text-[#eb5f0d] hover:text-[#fed9aa]">Portfolio</a></li>
+          <li><a href="index.html#testimonial" class="hover:text-[#fed9aa]">Testimonial</a></li>
+          <li><a href="index.html#contactus" class="hover:text-[#fed9aa]">Hubungi Kami</a></li>
+          <li><a href="https://blog.bariskode.com/" target="_blank" class="hover:text-[#fed9aa]">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Menu Mobile -->
+    <nav id="mobile-menu" class="sm:hidden hidden backdrop-blur-sm bg-white/0 shadow-md transition-all duration-300">
+      <ul class="flex flex-col space-y-2 p-4 text-[#28badb] items-end justify-end">
+        <li><a href="index.html" class="hover:text-[#fed9aa]">Home</a></li>
+        <li><a href="index.html#services" class="hover:text-[#fed9aa]">Service</a></li>
+        <li><a href="portfolio.html" class="text-[#eb5f0d] hover:text-[#fed9aa]">Portfolio</a></li>
+        <li><a href="index.html#testimonial" class="hover:text-[#fed9aa]">Testimonial</a></li>
+        <li><a href="index.html#contactus" class="hover:text-[#fed9aa]">Hubungi Kami</a></li>
+        <li><a href="https://blog.bariskode.com/" target="_blank" class="hover:text-[#fed9aa]">Blog</a></li>
+      </ul>
+  </nav>
+  </header>
+  <main class="max-w-6xl mx-auto p-4">
+    <section class="flex flex-col justify-center items-center gap-4 mb-12 pt-20" id="hero">
+      <article class="text-center">
+        <h1 class="text-4xl font-bold sm:text-5xl">
+          <span class="text-[#28badb]">Portfolio</span> <span class="text-[#eb5f0d]">Kami</span>
+        </h1>
+        <p class="max-w-2xl mt-4">Berikut adalah beberapa projek yang telah kami kerjakan. Setiap projek menunjukkan komitmen kami untuk memberikan solusi berkualitas tinggi.</p>
+      </article>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 max-w-4xl mx-auto gap-8 mb-12">
+      <!-- Portfolio Item 1 - SchemaSpark -->
+      <article class="portfolio-item group bg-white dark:bg-[#1a202c] rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border-2 border-transparent hover:border-[#28badb]" data-category="web">
+        <div class="relative aspect-video overflow-hidden bg-slate-100 dark:bg-slate-800">
+          <img src="img/schemaspark.png" alt="SchemaSpark - Schema Migration Tool" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">LIVE</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 text-[#28badb] group-hover:text-[#eb5f0d] transition-colors duration-300">SchemaSpark</h3>
+          <p class="text-sm mb-4 leading-relaxed">Web application yang memungkinkan user untuk mengubah schema table dari file Excel dan CSV menjadi berbagai migration file populer dan mudah digunakan.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-[#fed9aa] text-[#1a202c] text-xs font-semibold rounded-full">Web App</span>
+            <span class="px-3 py-1 bg-[#28badb] text-white text-xs font-semibold rounded-full">Migration Tool</span>
+          </div>
+          <a href="https://schemaspark.bariskode.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#28badb] hover:text-[#eb5f0d] font-semibold text-sm transition-colors duration-300">
+            <span>Kunjungi Website</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Portfolio Item 2 - Recipe -->
+      <article class="portfolio-item group bg-white dark:bg-[#1a202c] rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border-2 border-transparent hover:border-[#eb5f0d]" data-category="web">
+        <div class="relative aspect-video overflow-hidden bg-slate-100 dark:bg-slate-800">
+          <img src="img/recipe.png" alt="Recipe - Recipe Manager App" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">LIVE</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3 text-[#eb5f0d] group-hover:text-[#28badb] transition-colors duration-300">Recipe</h3>
+          <p class="text-sm mb-4 leading-relaxed">Web application untuk menyimpan resep makanan favorit yang mudah digunakan dilengkapi dengan gambar.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-[#fed9aa] text-[#1a202c] text-xs font-semibold rounded-full">Web App</span>
+            <span class="px-3 py-1 bg-[#eb5f0d] text-white text-xs font-semibold rounded-full">Recipe Manager</span>
+          </div>
+          <a href="https://recipe.bariskode.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#eb5f0d] hover:text-[#28badb] font-semibold text-sm transition-colors duration-300">
+            <span>Kunjungi Website</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <hr class="mx-auto bg-black dark:bg-white w-1/2 mt-10 mb-10">
+
+    <!-- Call to Action -->
+    <section class="text-center py-12">
+      <h2 class="text-3xl font-bold mb-4">
+        <span class="text-[#28badb]">Tertarik</span> <span class="text-[#eb5f0d]">Bekerja</span> Sama?
+      </h2>
+      <p class="mb-6 max-w-2xl mx-auto">
+        Kami siap membantu mewujudkan ide dan projek digital Anda. Hubungi kami untuk konsultasi gratis!
+      </p>
+      <a href="index.html#contactus" class="inline-block px-8 py-3 bg-[#eb5f0d] text-[#fed9aa] font-semibold rounded-lg hover:bg-[#249bb9] transition transform hover:scale-105">
+        Hubungi Kami Sekarang
+      </a>
+    </section>
+  </main>
+  <footer class="text-[#fed9aa] p-4">
+    <div class="container mx-auto">
+      <p class="text-center"><span class="text-[#28badb]">Baris</span> <span class="text-[#eb5f0d]">Kode</span> &copy;
+        2024</p>
+    </div>
+  </footer>
+  <!-- Floating Action Button for WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=628999802406&text=Halo Baris Kode,%20saya%20ingin%20memesan%20layanan."
+    target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-8 right-8 bg-[#25D366] text-white rounded-full p-4 shadow-lg hover:bg-[#20b358] transition transform hover:scale-110">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+      <path
+        d="M12 2.04c-5.52 0-10 4.48-10 10 0 1.76.46 3.41 1.27 4.87L2 22l5.17-1.36c1.41.76 3.01 1.18 4.83 1.18 5.52 0 10-4.48 10-10s-4.48-10-10-10zm0 18c-1.51 0-2.9-.35-4.15-.98l-.3-.16-3.04.8.8-3.04-.16-.3c-.63-1.25-.98-2.64-.98-4.15 0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8zm4.61-5.53c-.26-.13-1.52-.76-1.76-.85-.24-.09-.42-.13-.6.13-.18.26-.69.85-.85 1.03-.16.18-.31.2-.58.07-.26-.13-1.09-.4-2.08-1.26-.77-.68-1.29-1.51-1.44-1.77-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.47.13-.16.17-.27.26-.45.09-.18.04-.34-.02-.47-.13-.26-.6-1.45-.83-1.99-.22-.53-.45-.46-.6-.47h-.51c-.17 0-.45.07-.69.34s-.91.89-.91 2.18c0 1.28.93 2.52 1.06 2.69.13.18 1.83 2.88 4.43 3.76.62.21 1.1.34 1.47.44.62.2 1.18.17 1.62.1.49-.07 1.52-.62 1.73-1.22.21-.6.21-1.11.15-1.22-.06-.11-.24-.18-.5-.31z" />
+    </svg>
+  </a>
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+
+        // Menambahkan efek transisi pada kemunculan menu
+        if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.style.opacity = '0';
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.style.opacity = '1';
+            }, 10);
+        } else {
+            mobileMenu.style.opacity = '0';
+        }
+    });
+  </script>
+</body>
+
+</html>

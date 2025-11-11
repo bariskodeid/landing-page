@@ -1,4 +1,12 @@
+# robots.txt for Baris Kode
+# https://bariskode.com
+
 User-agent: *
-Disallow: 
-Disallow: /cgi-bin/
+Allow: /
+
+# Sitemaps
 Sitemap: https://bariskode.com/sitemap.xml
+
+# Disallow sensitive directories (if any)
+# Disallow: /admin/
+# Disallow: /private/
